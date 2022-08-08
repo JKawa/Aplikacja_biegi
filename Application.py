@@ -524,8 +524,6 @@ class App(tk.Tk):
     self.Button6.grid(row=5, column=0)
     self.Button7.grid(row=6, column=0)
 
-utworzenie_bazy()
-import_data()
 
 if __name__ == "__main__":
   app = App()
