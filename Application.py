@@ -4,6 +4,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from App_do_appl import *
 from datetime import datetime,date
+from create_database_table_import import *
 import encodings
 
 
@@ -522,6 +523,9 @@ class App(tk.Tk):
     self.Button5.grid(row=4, column=0)
     self.Button6.grid(row=5, column=0)
     self.Button7.grid(row=6, column=0)
+
+utworzenie_bazy()
+import_data()
 
 if __name__ == "__main__":
   app = App()
