@@ -4,12 +4,12 @@ from psycopg2.pool import SimpleConnectionPool
 from dotenv import load_dotenv
 
 
-database_uri ='postgres://muqopthd:5-4ufrJrs89u6rxc-_uIa_SN427i8L92@tyke.db.elephantsql.com/muqopthd'
+database_uri = "postgres://muqopthd:5-4ufrJrs89u6rxc-_uIa_SN427i8L92@tyke.db.elephantsql.com/muqopthd"
 
 if not database_uri:
     load_dotenv()
     database_uri = os.environ["DATABASE_URI"]
-    os.environ['DATABASE_URL']='<URI>'
+    os.environ["DATABASE_URL"] = "<URI>"
 
 pool = SimpleConnectionPool(minconn=1, maxconn=10, dsn=database_uri)
 
@@ -22,6 +22,7 @@ def get_connection():
         yield connection
     finally:
         pool.putconn(connection)
+
 
 @contextmanager
 def get_cursor(connection):
