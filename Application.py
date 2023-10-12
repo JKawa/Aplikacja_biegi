@@ -27,9 +27,9 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Aplikacja biegowa")
-        self.geometry("700x700")
+        self.geometry("700x480")
 
-        self.frame0 = tk.Frame(self, bg="white", height=200, width=700)
+        self.frame0 = tk.Frame(self, bg="#6F7FEB", height=220, width=700)
         self.frame0.grid_propagate(0)
         self.frame01 = tk.LabelFrame(self.frame0, bg="#6F7FEB", height=210, width=200)
         self.frame01.grid_propagate(0)
@@ -63,12 +63,12 @@ class App(tk.Tk):
 
         self.wyniki_table.column("#0", width=0, stretch="no")
         self.wyniki_table.column("id", anchor="center", width=20)
-        self.wyniki_table.column("nazwa", anchor="center", width=115)
+        self.wyniki_table.column("nazwa", anchor="center", width=145)
         self.wyniki_table.column("nr_start", anchor="center", width=100)
         self.wyniki_table.column("dystans", anchor="center", width=80)
         self.wyniki_table.column("czas", anchor="center", width=80)
-        self.wyniki_table.column("data", anchor="center", width=80)
-        self.wyniki_table.column("rok", anchor="center", width=80)
+        self.wyniki_table.column("data", anchor="center", width=90)
+        self.wyniki_table.column("rok", anchor="center", width=60)
         self.wyniki_table.column("lokalizacja", anchor="center", width=100)
 
         self.wyniki_table.heading("#0", text="", anchor="center")
